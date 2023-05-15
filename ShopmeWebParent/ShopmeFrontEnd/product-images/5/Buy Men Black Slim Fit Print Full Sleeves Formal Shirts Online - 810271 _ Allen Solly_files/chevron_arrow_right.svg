@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>VHicon/ArrowUp</title>
+    <defs>
+        <polygon id="path-1" points="4.73483496 -3.67417479 5.79549513 -4.73483496 16.3258252 5.79549513 5.79549513 16.3258252 4.73483496 15.265165 14.204165 5.79549513"></polygon>
+    </defs>
+    <g id="VHicon/ArrowUp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="swatches/black" transform="translate(32.265165, 32.000000) scale(1, -1) translate(-32.265165, -32.000000) translate(21.734835, 26.204505)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#000000" fill-rule="nonzero" transform="translate(10.530330, 5.795495) translate(-10.530330, -5.795495) " xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

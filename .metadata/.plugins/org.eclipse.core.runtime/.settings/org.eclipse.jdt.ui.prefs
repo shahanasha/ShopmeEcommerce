@@ -1,0 +1,12 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.twilio.type.Endpoint"><rhs name\="com.twilio.type.PhoneNumber"/></lhs><lhs name\="com.twilio.type.PhoneNumber"><rhs name\="com.twilio.type.PhoneNumber"/></lhs><lhs name\="org.springframework.security.core.session.SessionRegistry"><rhs name\="org.springframework.security.core.session.SessionRegistryImpl"/></lhs><lhs name\="java.lang.Enum"><rhs name\="com.shopme.common.entity.order.OrderStatus"/><rhs name\="com.shopme.common.entity.ArticleType"/><rhs name\="org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase$Replace"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="com.shopme.common.entity.order.OrderStatus"/><rhs name\="com.shopme.common.entity.ArticleType"/><rhs name\="org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase$Replace"/></lhs><lhs name\="com.shopme.common.entity.order.OrderStatus"><rhs name\="com.shopme.common.entity.order.OrderStatus"/></lhs><lhs name\="com.shopme.common.entity.ArticleType"><rhs name\="com.shopme.common.entity.ArticleType"/></lhs><lhs name\="com.shopme.common.entity.IdBasedEntity"><rhs name\="com.shopme.common.entity.Brand"/></lhs><lhs name\="com.shopme.common.entity.Brand"><rhs name\="com.shopme.common.entity.Brand"/></lhs></history>
+content_assist_number_of_computers=15
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

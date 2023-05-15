@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Shopme', 'none')" />
+<body>
+<div class="container-fluid">
+	<div th:replace="navigation :: header_menu"></div>
+	<div th:replace="navigation :: search_nav"></div>
+	
+	<div>
+		<h3>Featured Products</h3>
+		
+	<div class="row">
+		
+			<div class="px-3"><img th:src="@{/images/product_kid.jpg}"  width="150" height="200"  /></div>
+			
+
+	</div>
+		
+	</div>
+	
+	
+	<div class="row">
+		<th:block th:each="product : ${listProducts}">
+		<div th:replace="product/product_fragment :: content"></div>
+		</th:block>
+	</div>
+	
+	<div>
+		<h3>Shop by Category</h3>
+	</div>
+
+	<div class="row">
+		<div class="col" th:each="cat : ${listCategories}">
+			<div><img th:src="@{${cat.imagePath}}" width="200" height="250"/></div>
+			<div>
+				<a th:href="@{'/c/' + ${cat.alias}}">[[${cat.name}]]</a>
+			</div>
+		</div>
+	</div>
+	
+	<div th:replace="navigation :: footer_menu"></div>
+</div>	
+</body>
+</html> -->

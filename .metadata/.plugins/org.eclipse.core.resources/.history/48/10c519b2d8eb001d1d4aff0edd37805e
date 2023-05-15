@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Bannner - Shopme Admin', 'none')" />
+<body>
+<div class="container-fluid">
+	<div th:replace="navigation :: menu"></div>
+	<div>
+		<h2>Manage Banners</h2>	
+		
+		<a th:href="@{/banners/new}" class="fas fa-folder-plus fa-2x icon-dark mr-2"></a>
+
+
+	<div class="full-details">
+		<table class="table table-bordered table-striped table-hover table-responsive-xl">
+			<thead class="thead-dark">
+				<tr>
+					<th>Banner ID</th>
+					<th>Image</th>
+					<th>Title</th>
+					<!-- <th>Price</th> -->
+					
+					<th>Description</th>
+					<th>Enabled</th>
+<!-- 					<th>Link</th>
+ -->					
+				</tr>								
+			</thead>
+			<tbody>
+				<tr th:each="banner: ${listBanner}">
+					<td>[[${banner.id}]]</td>
+					<td>
+<!-- 						<img th:src="@{${brand.logoPath}}" style="width: 100px" class="img-fluid"/>-->
+					[[${banner.image}]]
+					</td>
+                     
+					<td>[[${banner.title}]]</td>
+					
+					<td>[[${banner.description}]]</td>
+										
+					<td>
+						<div th:replace="fragments :: status(${banner.enabled}, 'banner' , '/banners/' + ${banner.id})" />
+						
+						 
+					</td>
+<!--                      <td>[[${banner.link}]]</td>
+ -->					 <td>
+					 
+					    <a class="fas fa-file-alt fa-2x icon-green "
+					       th:href="@{'/banner/detail/' + ${banner.id}}"
+					       title="view details of this banner"
+					       ></a>
+					       
+					      &nbsp;
+						<div th:replace="fragments :: edit('banner', '/banners/edit/' + ${banner.id})" />
+						&nbsp; 
+						<div th:replace="fragments :: delete('banner', ${banner.id}, '/banners/delete/' + ${banner.id}, true)" />						
+					</td> 					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	
+	
+<!-- 	<div th:replace="fragments :: pagination('brands')"></div>
+ -->	
+	<div th:replace="modal_fragments :: confirm_modal" />
+	
+	<div th:replace="fragments :: footer"></div>
+	
+</div>
+<script th:src="@{/js/common_list.js}"></script>
+<script type="text/javascript">
+	moduleURL = "[[@{/banners}]]";
+
+	$(document).ready(function() {
+		$(".link-delete").on("click", function(e) {
+			e.preventDefault();
+			showDeleteConfirmModal($(this), 'banner');
+		});
+	});
+</script>
+</body>
+</html>

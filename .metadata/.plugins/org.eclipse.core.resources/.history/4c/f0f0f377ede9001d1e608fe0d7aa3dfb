@@ -1,0 +1,28 @@
+package com.shopme.admin.banner;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.shopme.common.entity.Banner;
+
+public class BannerRepositoryTests {
+	
+	@Autowired
+	private BannerRepository bannerRepository;
+
+	public void testCreateBanner()
+	{
+		Banner banner =new Banner();
+		banner.setTitle("HOT DEAL");
+        banner.setDescription("NEW product");
+        //banner.setLink("shop.commercefox.ml/c/laptop_computers");
+        banner.setImage("/site_logo.png");
+        banner.setPrice(500);
+        
+        Banner savedBanner =bannerRepository.save(banner);
+        System.out.println(savedBanner);
+        assertThat(savedBanner).isNotNull();
+        assertThat(savedBanner.getId()).isEqualTo(1);
+	}
+}

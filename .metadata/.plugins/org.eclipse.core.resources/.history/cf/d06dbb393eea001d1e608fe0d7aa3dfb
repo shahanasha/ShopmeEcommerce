@@ -1,0 +1,50 @@
+package com.shopme.admin.banner;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.annotation.Rollback;
+
+import com.shopme.common.entity.Banner;
+
+import antlr.collections.List;
+
+
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@Rollback(value = false)
+public class BannerRepositoryTests {
+	
+	@Autowired
+	private BannerRepository bannerRepository;
+
+	@Test
+	public void testCreateBanner()
+	{
+		Banner banner =new Banner();
+		banner.setId(1);
+		banner.setImage("/site_logo.png");
+		banner.setTitle("HOT DEAL");
+		banner.setPrice(500);
+        banner.setDescription("NEW product");
+        //banner.setLink("shop.commercefox.ml/c/laptop_computers");
+        banner.setEnabled(true);
+        banner.setLink("shop.commercefox.ml/c/laptop_computers");
+        Banner savedBanner =bannerRepository.save(banner);
+        System.out.println(savedBanner);
+        assertThat(savedBanner).isNotNull();
+        assertThat(savedBanner.getId()).isEqualTo(1);
+	}
+	
+	@Test
+    public void FindAllBanner(){
+
+        List<Banner> bannerList = bannerRepository.findAll();
+
+        bannerList.forEach(System.out::println);
+
+    }
+}

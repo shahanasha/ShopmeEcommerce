@@ -1,0 +1,1 @@
+$.getScript("https://www.primeai3.in/CUSTOMERS/abfrl_superapp/fitwidget/pai_retailer_min.js").then(function(){$.getScript("https://www.primeai3.in/CUSTOMERS/abfrl_superapp/fitwidget/pai_widget_min.js");},function(status){console.log("error: "+status.status)});
