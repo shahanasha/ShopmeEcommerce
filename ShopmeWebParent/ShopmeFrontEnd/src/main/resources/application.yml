@@ -1,21 +1,15 @@
 server:
-  port: 80
-  servlet:
-    context-path: /Shopme
-    
-twilio:
-    account_sid: ACe6fa47560a657e7e09b8e239df309534
-    auth_token: c2bade6f34511609df1f7e455cbf1169
-#    trial_number: +918330044202
-
+  port: 8081
+  # servlet:
+  #   context-path: /Shopme
 spring:
   datasource:
-    password: Shahana@01
-    url: jdbc:mysql://localhost:3306/shopme
-    username: root
-    #hikari:
-      #minimum-idle: 1
-      #maximum-pool-size: 2
+    password: 12345678
+    url: jdbc:mysql://database.cuehqazd1okf.ap-southeast-2.rds.amazonaws.com/shopme
+    username: admin
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 2
   jpa:
     hibernate:
       ddl-auto: none
