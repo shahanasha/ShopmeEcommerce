@@ -12,7 +12,7 @@ import java.util.Map;
 public class ShopmeBackEndApplication {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
+
 		SpringApplication.run(ShopmeBackEndApplication.class, args);
 		// Retrieve all environment variables
 //        Map<String, String> env_var = System.getenv();
@@ -24,8 +24,6 @@ public class ShopmeBackEndApplication {
 //            System.out.println();
 //        }
 //	}
-=======
-		SpringApplication.run(ShopmeBackEndApplication.class, args);	
->>>>>>> 6134c06b42bf599f1c4316e87c4883ae6da416da
+
 	}
 }
